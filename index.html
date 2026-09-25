@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kisan Mitra — IVRS Simulator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#4A7C59',
+            secondary: '#8B6F47',
+            background: '#F5F1E8',
+            textDark: '#2D2D2D',
+            alert: '#D97706',
+            success: '#4A7C59',
+            error: '#C0392B',
+          },
+          fontFamily: {
+            inter: ['Inter', 'sans-serif'],
+            poppins: ['Poppins', 'sans-serif'],
+          },
+          borderRadius: {
+            xl: '12px',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #F5F1E8; color: #2D2D2D; }
+    h1, h2, h3, h4, .font-heading { font-family: 'Poppins', sans-serif; }
+    @keyframes pulse-ring {
+      0% { transform: scale(0.8); opacity: 0.8; }
+      50% { transform: scale(1.1); opacity: 0.4; }
+      100% { transform: scale(0.8); opacity: 0.8; }
+    }
+    .calling-pulse { animation: pulse-ring 1.5s ease-in-out infinite; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in { animation: fadeIn 0.35s ease-out forwards; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel" src="./data.js"></script>
+  <script type="text/babel" src="./App.js"></script>
+</body>
+</html>
